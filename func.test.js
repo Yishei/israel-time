@@ -6,6 +6,7 @@ const { timeConverter, isDLS } = require("./func.js");
 describe("isDLS", () => {
   it("3/26/2021 1:59 should retern False becuse befure 2", () => {
     const date = new Date(2021, 2, 26, 1, 59);
+    const result = isDLS(date);
     expect(result).toBe(false);
   });
   it("1/26/2021 1:59 should retern False becuse befure last Friday", () => {
